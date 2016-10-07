@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en" >
+
+<head>
+    <title>Accessible Table Generator</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="tableGen.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="tableGen.css" />
+
+</head>
+
+<body>
+
+    <div class="alert alert-success" role="alert" style="display:none;">
+        <strong>Content Saved to Clipboard</strong>
+    </div>
+    <div class="alert alert-danger" role="alert" style="display:none;">
+        <strong>Sorry something went wrong.</strong> Try right clicking the content and copying or use Ctrl + C buttons.
+    </div>
+
+    <div class="ctrl">
+        <h1>Accessible Table Generator</h1>
+        <p>Click in the grid to the right and drag the mouse over the amount of Columns and Rows required, or use the form fields below.</p>
+        <p>Choose they type of form you would like, the mark up needed for the type of data you have and the caption for the table.</p>
+        <p>If you need more information on what type of mark up you require, then click the link below the form.</p>
+        <div>
+            <div class="form-group">
+                <label>Rows</label>
+                <input type="number" class="formRow form-control" value="0" />
+            </div>
+            <div class="form-group">
+                <label>Columns</label>
+                <input type="number" class="formCol form-control" value="0" />
+            </div>
+            <div class="form-group">
+                <label>Table Type</label>
+                <select class="formType form-control">
+                    <option value="heading" >Top Heading only</option>
+                    <option value="side" >Side Heading only</option>
+                    <option value="headingside" >Side and Top Heading</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Makrup Type</label>
+                <select class="formMarkup form-control">
+                    <option value="table" >Table Tags</option>
+                    <option value="div" >Div Tags</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Table Caption</label>
+                <input type="text" class="formCap form-control" placeholder="This is my Table" />
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary submitBtn">Generate Table</button>
+            </div>
+
+        </div>
+
+        <div>
+
+            <div class="tableGen">
+            </div>
+
+        </div>
+
+        <div>
+            <a href="#" class="tableInfo">What tags should I use?</a>
+            <div class="tableInfoContent" style="display:none;clear:both;">
+                <b>Your Contents Are Tabular(Table) Data If:</b>
+                <p>If what you're going to place on the page is information that would make sense to record or track in a spreadsheet,
+                    it is almost certainly tabular data.</p>
+                <p>If you're going to have header fields at the top of columns of data or to the left of rows of data, then
+                    it is tabular and a table should be used.</p>
+                <br/>
+                <b>You Should Not Use a Table If:</b>
+                <p>The main purpose of the table is to position the contents on the page in some way. For example, to add spacing
+                    around an image, to place "bullet" icons on a list, or to force a block of text to act like a pull quote.</p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="ctrl tableResult">
+
+    </div>
+    <div class="ctrl">
+        <div class="formCtrl">
+            <button class="btn btn-primary genBtn" style="display:none;">Generate Accessible Table Mark-up</button>
+        </div>
+    </div>
+
+    <div class="ctrl divResulCtrl" style="display:none">
+        <button type="button" class="btn btn-info copyBtn">Copy Content</button>
+        <textarea class="divResult">
+
+        </textarea>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+   .ctrl {
+       max-width: 1024px;
+       margin: auto;
+       position: relative;
+   }
+
+   .ctrl > div {
+       max-width: 49%;
+       display: inline-block;
+       width: 100%;
+       box-sizing: border-box;
+       padding: 15px;
+       vertical-align: top;
+   }
+
+   .formCtrl {
+       margin: 15px 0;
+   }
+
+   .formCtrl > label {
+       max-width: 100px;
+       display: inline-block;
+       width: 100%;
+   }
+
+   .formCtrl input, .formCtrl select {
+       max-width: 250px;
+       width: 100%;
+   }
+
+   .tableGen > div div {
+       display: inline-block;
+       box-sizing: border-box;
+       padding: 1px;
+       border: 1px solid;
+       width: 25px;
+       text-align: center;
+   }
+
+   .tableGen {
+       border: 1px solid;
+       width: auto;
+       display: inline-block;
+   }
+
+   .tableGen > div div.active {
+       background-color: #337ab7;
+   }
+
+   .ctrl.tableResult table {
+       width: 100%;
+   }
+
+   .ctrl.tableResult table th textarea {
+       background-color: #ccc;
+   }
+
+   .ctrl.tableResult table td {
+       text-align: center;
+   }
+
+   .ctrl.tableResult table textarea {
+       width: 97%;
+       height: 97%;
+   }
+
+   textarea.divResult {
+       border: 1px solid;
+       box-sizing: border-box;
+       padding: 10px;
+       box-shadow: 0 0 10px #000 inset;
+       width: 100%;
+       clear: both;
+       display: block;
+       max-width: 100%;
+       min-height: 500px;
+   }
+
+   .alert {
+       text-align: center;
+       position: fixed;
+       top: 0;
+       width: 100%;
+       z-index: 1;
+       box-shadow: 0 0 10px #000;
+   }
+
+   .copyBtn {
+       position: absolute;
+       right: -1px;
+       top: -1px;
+       z-index: 1;
+   }
+
+   .ctrl.divResulCtrl {
+       margin-bottom: 50px;
+   }
